@@ -1,0 +1,159 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo principal */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0c1d2; /* Fundo verde-azulado */
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Menu de navegação */
+ul {
+  list-style-type: none;
+  display: flex;
+  background-color: #f6d0eb;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed; /* Fixa o menu no topo */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+  padding: 10px 0;
+}
+
+ul li a {
+  display: block;
+  color: #b88cd8;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 18px;
+}
+
+ul li a:hover {
+  background-color: #dba5c5;
+  color: white;
+}
+
+/* Banner */
+#banner {
+  width: 100%;
+  background: linear-gradient(to right, #f8c6e6, #a6e5f3);
+  padding: 100px 20px; /* Espaçamento interno maior */
+  text-align: center;
+  min-height: 400px;
+  margin-top: 60px; /* Espaçamento para compensar o menu fixo */
+  display: flex;
+  flex-direction: column; /* Organiza os elementos verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  gap: 20px; /* Espaçamento entre os elementos */
+}
+
+#banner img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Galeria */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+}
+
+/* Cartão */
+.item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.item h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Efeito hover */
+.item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Música */
+.music-player {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.music-player audio {
+  width: 100%;
+  max-width: 400px;
+}
+
+.music-player h2 {
+  color: blueviolet;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #f6d0eb;
+  text-align: center;
+  padding: 50px 20px;
+  width: 100%;
+  margin-top: auto;
+  border-top: 2px solid #b88cd8;
+  font-size: 16px;
+  color: #5b2c6f;
+  box-sizing: border-box;
+}
+
+footer p {
+  margin: 5px 0;
+  color: #5b2c6f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
